@@ -7,18 +7,17 @@ button1.onclick = function(){
 }
 
 // 2a
-const h3 = document.getElementsByTagName(`h3`);
+const h3 = document.querySelector(`h3`);
 
 // 2b
-h3.addEventListener("onmouseover", function(){
-    alert(`OH NO!`);
+h3.addEventListener(`mouseenter`, function(){
+    alert(`OH NO! The squirrels are on to you. Now you have to leave this reality and move to a new one`);
 });
 
 // 3a
 const form = document.getElementsByTagName(`form`);
 
 // 3b
-const input = document.getElementsByName(`quote`).values;
 form.addEventListener("submit", function(){
-    alert(`${input}`);
+    alert(`${form.elements.quotevalue}`);
 });
